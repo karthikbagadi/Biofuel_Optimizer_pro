@@ -1,0 +1,42 @@
+project:
+  name: "Biofuel Optimization Framework"
+  version: "1.0.0"
+  seed: 42
+
+data:
+  n_samples: 5000
+  test_size: 0.2
+  validation_size: 0.1
+  features:
+    - Temperature_C
+    - Time_hours
+    - pH
+    - Enzyme_mL
+    - Substrate_gL
+    - Inoculum_mL
+  target: Biofuel_Yield_gL
+  parameter_ranges:
+    Temperature_C: [30, 40]
+    Time_hours: [24, 96]
+    pH: [4.5, 6.0]
+    Enzyme_mL: [10, 40]
+    Substrate_gL: [50, 200]
+    Inoculum_mL: [5, 20]
+
+models:
+  random_forest:
+    n_estimators: [100, 200, 300]
+    max_depth: [10, 15, 20]
+    min_samples_split: [2, 5, 10]
+
+optimization:
+  algorithm: "differential_evolution"
+  maxiter: 200
+  popsize: 50
+  mutation: [0.5, 1.0]
+  recombination: 0.7
+
+visualization:
+  dpi: 300
+  figsize: [10, 6]
+  style: "seaborn-v0_8-darkgrid"

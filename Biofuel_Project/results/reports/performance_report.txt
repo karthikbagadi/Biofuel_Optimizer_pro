@@ -1,0 +1,28 @@
+============================================================
+BIOFUEL OPTIMIZATION SYSTEM - PERFORMANCE REPORT
+============================================================
+
+Date: 2026-03-22 15:49:12
+
+MODEL PERFORMANCE:
+  R² Score: 0.9138
+  MAE: 0.15 g/L
+
+FEATURE IMPORTANCE:
+  Inoculum_mL: 45.3%
+  Enzyme_mL: 27.6%
+  pH: 18.7%
+  Temperature_C: 4.7%
+  Substrate_gL: 2.1%
+  Time_hours: 1.6%
+
+OPTIMAL PARAMETERS:
+  Temperature: 39.7°C
+  Time: 87.9 hours
+  pH: 4.50
+  Enzyme: 37.9 mL
+  Substrate: 199.2 g/L
+  Inoculum: 17.5 mL
+
+Maximum Yield: 26.51 g/L
+Improvement: 430.2%
