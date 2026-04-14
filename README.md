@@ -70,39 +70,35 @@ The system uses **4 different Machine Learning models** (Random Forest, XGBoost,
 | **Version Control** | Git, GitHub |
 
 ---
-
 ## 📁 Project Structure
+
 Biofuel_Optimizer_Pro/
 │
-├── app.py # Main Streamlit application (4500+ lines)
-├── train_models.py # Model training script
-├── optimization.py # Optimization algorithms
-├── requirements.txt # Python dependencies
+├── app.py                      # Main Streamlit application (4500+ lines)
+├── train_models.py             # Model training script
+├── optimization.py             # Optimization algorithms
+├── requirements.txt            # Python dependencies
 │
 ├── data/
-│ └── biofuel_data.csv # Dataset (5000 samples)
+│   └── biofuel_data.csv        # Dataset (5000 samples)
 │
-├── models/ # Trained models (.pkl files)
-│ ├── random_forest.pkl
-│ ├── xgboost.pkl
-│ ├── gradient_boosting.pkl
-│ └── neural_network.pkl
+├── models/                     # Trained models (.pkl files)
+│   ├── random_forest.pkl
+│   ├── xgboost.pkl
+│   ├── gradient_boosting.pkl
+│   └── neural_network.pkl
 │
-├── results/ # Output reports and figures
-│ ├── figures/
-│ └── reports/
+├── results/                    # Output reports and figures
+│   ├── figures/
+│   └── reports/
 │
-├── src/ # Source modules
-│ ├── data/
-│ ├── models/
-│ ├── optimization/
-│ └── visualization/
+├── src/                        # Source modules
+│   ├── data/
+│   ├── models/
+│   ├── optimization/
+│   └── visualization/
 │
-└── README.md # Project documentation
-
-text
-
----
+└── README.md                   # Project documentation
 
 ## 🚀 Installation and Setup
 
@@ -113,124 +109,126 @@ text
 
 ### Step 1: Clone the Repository
 
-```bash
 git clone https://github.com/yourusername/Biofuel-Optimizer-Pro.git
 cd Biofuel-Optimizer-Pro
-Step 2: Create Virtual Environment
-bash
-# Windows
+
+### Step 2: Create Virtual Environment
+
+Windows:
 python -m venv venv
 venv\Scripts\activate
 
-# Mac/Linux
+Mac/Linux:
 python3 -m venv venv
 source venv/bin/activate
-Step 3: Install Dependencies
-bash
+
+### Step 3: Install Dependencies
+
 pip install -r requirements.txt
-Step 4: Train Models (First Time Only)
-bash
+
+### Step 4: Train Models (First Time Only)
+
 python train_models.py
+
 This will:
+- Generate 5000 synthetic samples
+- Train all 4 machine learning models
+- Save models in the models/ folder
 
-Generate 5000 synthetic samples
+### Step 5: Run the Application
 
-Train all 4 machine learning models
-
-Save models in the models/ folder
-
-Step 5: Run the Application
-bash
 streamlit run app.py
+
 Open your browser and go to: http://localhost:8501
 
-📖 How to Use
-1. Dashboard
+## 📖 How to Use
+
+### 1. Dashboard
 View key metrics, yield distribution, and correlation matrix.
 
-2. File Upload
+### 2. File Upload
 Upload your own CSV file. The AI automatically detects column names.
 
-3. Predict
-Select prediction mode (Single Model / Compare All / Ensemble)
+### 3. Predict
+- Select prediction mode (Single Model / Compare All / Ensemble)
+- Adjust 6 parameter sliders
+- Click "Generate Predictions"
+- View results from all 4 models
 
-Adjust 6 parameter sliders
+### 4. Optimize
+- Select optimization algorithm
+- Set iterations and population size
+- Click "Run Optimization"
+- Get optimal parameters and yield improvement
 
-Click "Generate Predictions"
+### 5. Analysis
+- View feature importance chart
+- Explore SHAP explainability plots
+- PCA and clustering analysis
 
-View results from all 4 models
+### 6. Reports
+- Export results as PDF, Excel, CSV, or JSON
+- Share on WhatsApp
 
-4. Optimize
-Select optimization algorithm
+## 📸 Screenshots
 
-Set iterations and population size
+| Dashboard | Predict Page |
+|-----------|--------------|
+| (Add screenshot here<img width="1918" height="1026" alt="Screenshot 2026-04-10 172652" src="https://github.com/user-attachments/assets/1013d0b8-b717-466c-99aa-259bf2b318d8" />
+<img width="1910" height="1030" alt="Screenshot 2026-04-10 172505" src="https://github.com/user-attachments/assets/856fa0a3-f644-4998-82db-3c8eeb932e21" />
+) | (<img width="1919" height="1028" alt="Screenshot 2026-04-10 172921" src="https://github.com/user-attachments/assets/1cfd9408-607c-4ace-a3df-1981a765a4d6" />
+![Uploading Screenshot 2026-04-10 172652.png…]()
+Add screenshot here) |
 
-Click "Run Optimization"
+| Optimization | Reports Page<img width="1915" height="1027" alt="Screenshot 2026-04-10 173003" src="https://github.com/user-attachments/assets/83917ee5-7e56-4d4b-b6d0-f2b558e9778e" />
+ |
+|--------------|----------------|
+| (Add scre![Uploading Screenshot 2026-04-10 172921.png…]()
+enshot here) | (Add screenshot here) |
 
-Get optimal parameters and yield improvement
+## 🤝 Contributing
 
-5. Analysis
-View feature importance chart
-
-Explore SHAP explainability plots
-
-PCA and clustering analysis
-
-6. Reports
-Export results as PDF, Excel, CSV, or JSON
-
-Share on WhatsApp
-
-📸 Screenshots
-Dashboard	Predict Page
-(Add screenshot here)	(Add screenshot here)
-Optimization	SHAP Analysis
-(Add screenshot here)	(Add screenshot here)
-🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-Fork the repository
+1. Fork the repository
+2. Create your feature branch (git checkout -b feature/AmazingFeature)
+3. Commit your changes (git commit -m 'Add some AmazingFeature')
+4. Push to the branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+## 📄 License
 
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-👥 Authors
-Bagadi Karthik
-Nukala Syam Venkata Dhanush
+## 👥 Authors
+
+| Name | Registration No | VTU No |
+|------|-----------------|--------|
+| Bagadi Karthik | 22UECM0020 | VTU22064 |
+| Nukala Syam Venkata Dhanush | 22UECM0187 | VTU22522 |
+
 Supervisor: Dr. S. Durai, Associate Professor, Department of Computer Science and Engineering
 
-📚 References
-Kuila, A., & Kumar, D. (2025). Optimizing Biofuel Production with Artificial Intelligence. John Wiley & Sons.
+## 📚 References
 
-Hassan, M. M., et al. (2025). Enhancing Prediction of Bioenergy Yield using AI-based Identification of Biomass Species. IEEE ICMISI.
+1. Kuila, A., & Kumar, D. (2025). Optimizing Biofuel Production with Artificial Intelligence. John Wiley & Sons.
+2. Hassan, M. M., et al. (2025). Enhancing Prediction of Bioenergy Yield using AI-based Identification of Biomass Species. IEEE ICMISI.
+3. Kazmi, A., et al. (2025). Innovations in bioethanol production. Energy Strategy Reviews, 57, 101634.
+4. Mafat, I. H., et al. (2024). Machine learning and artificial intelligence for algal cultivation and biofuel production optimization. Springer.
+5. Saju, L., et al. (2025). Artificial intelligence and machine intelligence for modeling of bioenergy production. Elsevier.
+6. Patidar, S. K., & Raheman, H. (2023). An AI-based approach to improve fuel properties. Biofuels, 14(6), 619-633.
 
-Kazmi, A., et al. (2025). Innovations in bioethanol production. Energy Strategy Reviews, 57, 101634.
+## 🙏 Acknowledgments
 
-Mafat, I. H., et al. (2024). Machine learning and artificial intelligence for algal cultivation and biofuel production optimization. Springer.
+- Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology
+- Department of Computer Science and Engineering
+- Dr. S. Durai for continuous guidance and support
 
-Saju, L., et al. (2025). Artificial intelligence and machine intelligence for modeling of bioenergy production. Elsevier.
+## 📧 Contact
 
-Patidar, S. K., & Raheman, H. (2023). An AI-based approach to improve fuel properties. Biofuels, 14(6), 619-633.
-
-🙏 Acknowledgments
-Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology
-
-Department of Computer Science and Engineering
-
-Dr. S. Durai for continuous guidance and support
-
-📧 Contact
 For any queries, please contact:
+- Bagadi Karthik: [bkarthikbagadi143@gmail.com]
+- Nukala Syam Venkata Dhanush: [nukaladhanush223@gmail.com]
 
-Bagadi Karthik: [bkarthikbagadi143@gmail.com]
-
-Nukala Syam Venkata Dhanush: [Your Email]
+⭐ If you find this project useful, please give it a star on GitHub!
 
