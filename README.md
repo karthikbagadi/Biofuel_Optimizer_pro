@@ -109,7 +109,7 @@ Biofuel_Optimizer_Pro/
 
 ### Step 1: Clone the Repository
 
-git clone https://github.com/yourusername/Biofuel-Optimizer-Pro.git
+git clone https://github.com/karthikbagadi/Biofuel_Optimizer_pro
 cd Biofuel-Optimizer-Pro
 
 ### Step 2: Create Virtual Environment
